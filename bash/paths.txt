@@ -1,0 +1,10 @@
+/Users/jbarnette/bin
+/opt/local/bin
+/opt/local/lib/mysql5/bin
+/usr/local/git/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/X11/bin
