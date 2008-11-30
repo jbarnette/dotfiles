@@ -1,4 +1,2 @@
 export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
-export PS1='\w → '
-
-export EDITOR="mate -w"
+export PS1='\w$ '
