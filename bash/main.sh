@@ -1,2 +1,4 @@
 export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
-export PS1='\w$ '
+
+. "$DOTFILES/bash/git.sh"
+export PS1='$(__git_ps1 "[%s] ")\w\\$ '
