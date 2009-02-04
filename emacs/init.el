@@ -14,3 +14,4 @@
 (require 'my-navigation)
 (require 'my-rails)
 (require 'my-ruby)
+(require 'my-scm)

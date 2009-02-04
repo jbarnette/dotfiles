@@ -13,6 +13,3 @@
 [submodule "emacs/vendor/rinari"]
 	path = emacs/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
-[submodule "emacs/vendor/magit"]
-	path = emacs/vendor/magit
-	url = git://gitorious.org/magit/mainline.git
