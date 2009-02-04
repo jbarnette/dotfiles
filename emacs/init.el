@@ -12,4 +12,5 @@
 (require 'my-loading-and-saving)
 (require 'my-modes)
 (require 'my-navigation)
+(require 'my-rails)
 (require 'my-ruby)
