@@ -31,4 +31,6 @@
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
+(require 'autotest)
+
 (provide 'my-ruby)
