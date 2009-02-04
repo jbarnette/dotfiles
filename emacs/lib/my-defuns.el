@@ -38,7 +38,13 @@
   (newline-and-indent))
 
 (defun jbarnette-recompile-init ()
+  "Recompiles all the files under my .emacs.d"
   (interactive)
   (byte-recompile-directory dot-dir 0))
+
+(defun init ()
+  "Edit my init.el"
+  (interactive)
+  (find-file (concat dot-dir "/init.el")))
 
 (provide 'my-defuns)
