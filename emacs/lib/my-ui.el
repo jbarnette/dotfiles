@@ -1,7 +1,6 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 (require 'color-theme)
-(color-theme-initialize)
 (load-file (concat dot-dir "/vendor/twilight-emacs/color-theme-twilight.el"))
 (color-theme-twilight)
 
