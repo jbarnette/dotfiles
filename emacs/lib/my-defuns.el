@@ -37,4 +37,8 @@
   (end-of-line)
   (newline-and-indent))
 
+(defun jbarnette-recompile-init ()
+  (interactive)
+  (byte-recompile-directory dot-dir 0))
+
 (provide 'my-defuns)
