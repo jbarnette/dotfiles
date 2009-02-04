@@ -5,4 +5,5 @@ export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
 
 export PS1='$(__git_ps1 "[%s] ")\w\\$ '
 export LD_LIBRARY_PATH=/opt/local/lib
-export EDITOR=/usr/local/bin/emacsclient
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+export VISUAL=$EDITOR
