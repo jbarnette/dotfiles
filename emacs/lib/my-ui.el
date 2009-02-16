@@ -20,9 +20,29 @@
 (setq truncate-partial-width-windows nil)
 
 ;; no tabs, just spaces
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; deemphasize parens in lisp
 (require 'parenface)
+
+;; mark tabs, trailing spaces, and long lines
+
+(custom-set-faces
+ '(my-tab-face            ((((class color)) (:background "grey10"))) t)
+ '(my-trailing-space-face ((((class color)) (:background "gray10"))) t)
+ '(my-long-line-face ((((class color)) (:background "gray10"))) t))
+
+(add-hook 'font-lock-mode-hook
+          (function
+           (lambda ()
+             (setq font-lock-keywords
+                   (append font-lock-keywords
+                           '(("\t+" (0 'my-tab-face t))
+                             ("^.\\{81,\\}$" (0 'my-long-line-face t))
+                             ("[ \t]+$"      (0 'my-trailing-space-face t))))))))
+
+;; pulse the current line after certain operations
+(require 'pulse)
+(pulse-toggle-integration-advice t)
 
 (provide 'my-ui)
