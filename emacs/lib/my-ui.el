@@ -13,7 +13,7 @@
 (toggle-scroll-bar -1)
 (setq inhibit-startup-message t)
 
-(setq frame-title-format "%b")
+(setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (setq resize-minibuffer-mode t)
 
 ;; wrap
