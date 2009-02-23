@@ -16,6 +16,9 @@
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (setq resize-minibuffer-mode t)
 
+;; i like erase-buffer
+(put 'erase-buffer 'disabled nil)
+
 ;; wrap
 (setq truncate-partial-width-windows nil)
 
