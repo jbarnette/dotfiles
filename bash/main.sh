@@ -9,3 +9,4 @@ export PS1='$(__git_ps1 "[%s] ")\w\\$ '
 export LD_LIBRARY_PATH=/opt/local/lib
 export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
+export P4CONFIG=.p4config
