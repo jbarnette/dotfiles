@@ -1,0 +1,51 @@
+module <%= klass %>
+  class Cli
+    def verbose?
+      @verbose
+    end
+
+    def go! out, args
+      OptionParser.new do |opts|
+        opts.banner = IO.read path("doc", "cli.txt")
+        opts.separator ""
+
+        opts.on "--verbose", "-v", "Show more help and diagnostics." do
+          @verbose = true
+        end
+
+        opts.on "--help", "-h", "-?", "Show this help." do
+          help! out, opts
+        end
+
+        opts.on "--version", "-V", "Show <%= project %> version." do
+          out.puts <%= klass %>::VERSION
+          exit
+        end
+
+        opts.separator ""
+
+        opts.parse! args
+        help!(out, opts) if args.empty?
+      end
+    end
+
+    private
+
+    def path *args
+      File.join File.dirname(__FILE__), "..", "..", *args
+    end
+
+    def help! out, opts
+      opt.puts opts
+
+      if verbose?
+        out.puts IO.read(path "doc", "cli-examples.txt")
+      else
+        out.puts "Try `<%= project %> -vh` for more detailed help and examples."
+        out.puts
+      end
+
+      exit
+    end
+  end
+end
