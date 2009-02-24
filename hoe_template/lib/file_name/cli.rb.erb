@@ -1,3 +1,5 @@
+require "optparse"
+
 module <%= klass %>
   class Cli
     def verbose?
@@ -36,10 +38,10 @@ module <%= klass %>
     end
 
     def help! out, opts
-      opt.puts opts
+      out.puts opts
 
       if verbose?
-        out.puts IO.read(path "doc", "cli-examples.txt")
+        out.puts IO.read(path("doc", "cli-examples.txt"))
       else
         out.puts "Try `<%= project %> -vh` for more detailed help and examples."
         out.puts
