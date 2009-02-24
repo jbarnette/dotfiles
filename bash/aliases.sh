@@ -7,5 +7,8 @@ alias rake1.9="rake1.9 -qs"
 alias ss="script/server"
 
 # latest versions of unreleased stuff
-alias latest-sow="ruby -S -I~/work/p4/src/hoe/dev/lib \
-                  ~/work/p4/src/hoe/dev/bin/sow"
+for f in `find ~/work/p4/src -type f | grep /dev/bin/`
+do
+    d=`dirname $f`
+    alias dev-`basename $f`="ruby -I$d/../lib:$d/../ext -S $f"
+done
