@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
 
-require File.expand_path(File.dirname(__FILE__) + "/../lib/<%= project %>")
 require "<%= project %>/cli"
-
 <%= klass %>::Cli.new.go! STDOUT, ARGV
