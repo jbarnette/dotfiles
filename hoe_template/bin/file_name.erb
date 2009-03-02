@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
 
 require "<%= project %>/cli"
-<%= klass %>::Cli.new.go! STDOUT, ARGV
+
+<%= klass %>::Cli.new STDOUT, ARGV do |cli|
+  # <%= XIF %>: do your stuff
+end

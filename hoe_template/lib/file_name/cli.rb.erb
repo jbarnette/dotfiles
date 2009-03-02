@@ -1,14 +1,14 @@
 require "optparse"
+require "<%= project %>/version"
 
 module <%= klass %>
   class Cli
-    def verbose?
-      @verbose
-    end
+    def initialize out, args
+      @args    = args
+      @run     = true
+      @verbose = false
 
-    def go! out, args
       OptionParser.new do |opts|
-        opts.banner = IO.read path("doc", "cli.txt")
         opts.separator ""
 
         opts.on "--verbose", "-v", "Show more help and diagnostics." do
@@ -16,38 +16,23 @@ module <%= klass %>
         end
 
         opts.on "--help", "-h", "-?", "Show this help." do
-          help! out, opts
+          out.puts opts
+          @run = false
         end
 
         opts.on "--version", "-V", "Show <%= project %> version." do
           out.puts <%= klass %>::VERSION
-          exit
+          @run = false
         end
 
         opts.separator ""
-
         opts.parse! args
-        help!(out, opts) if args.empty?
+        yield self if @run && block_given?
       end
     end
 
-    private
-
-    def path *args
-      File.join File.dirname(__FILE__), "..", "..", *args
-    end
-
-    def help! out, opts
-      out.puts opts
-
-      if verbose?
-        out.puts IO.read(path("doc", "cli-examples.txt"))
-      else
-        out.puts "Try `<%= project %> -vh` for more detailed help and examples."
-        out.puts
-      end
-
-      exit
+    def verbose?
+      @verbose
     end
   end
 end
