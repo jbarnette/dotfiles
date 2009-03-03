@@ -1,5 +1,6 @@
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 alias jek="jekyll --pygments --auto --server"
+alias pj="pastejour"
 
 # ruby and rails bits
 alias rake="rake -qs"

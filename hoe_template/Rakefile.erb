@@ -1,12 +1,16 @@
-# -*- ruby -*-
+require "rubygems"
+require "hoe"
 
-require 'rubygems'
-require 'hoe'
-require './lib/<%= project %>.rb'
+require "./lib/<%= project %>/version.rb"
 
-Hoe.new('<%= project %>', <%= klass %>::VERSION) do |p|
-  # p.rubyforge_name = '<%= project %>x' # if different than lowercase project name
-  # p.developer('<%= XIF %>', '<%= XIF %>@example.com')
+Hoe.new "<%= project %>", <%= klass %>::VERSION do |p|
+  p.developer "John Barnette", "jbarnette@rubyforge.org"
+
+  p.url              = "http://github.com/jbarnette/<%= project %>"
+  p.history_file     = "CHANGELOG.rdoc"
+  p.readme_file      = "README.rdoc"
+  p.extra_rdoc_files = [p.readme_file]
+  p.need_tar         = false
+  p.test_globs       = %w(test/**/*_test.rb)
+  p.testlib          = :minitest
 end
-
-# vim: syntax=Ruby

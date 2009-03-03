@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
-abort "you need to write me"
+require "<%= project %>/cli"
+
+<%= klass %>::Cli.new STDOUT, ARGV do |cli|
+  # <%= XIF %>: do your stuff
+end
