@@ -43,12 +43,20 @@
   (previous-line)
   (indent-according-to-mode))
 
+(defun jbarnette-air ()
+  "Resize, split, and position for the MacBook Air."
+  (interactive)
+  (delete-other-windows)
+  (set-frame-position (selected-frame) 53 25)
+  (set-frame-size (selected-frame) 164 52)
+  (split-window-horizontally))
+
 (defun jbarnette-recompile-init ()
   "Recompiles all the files under my .emacs.d"
   (interactive)
   (byte-recompile-directory dot-dir 0))
 
-(defun init ()
+(defun jbarnette-init ()
   "Edit my init.el"
   (interactive)
   (find-file (concat dot-dir "/init.el")))
