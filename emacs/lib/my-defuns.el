@@ -47,7 +47,7 @@
   "Resize, split, and position for the MacBook Air."
   (interactive)
   (delete-other-windows)
-  (set-frame-position (selected-frame) 53 25)
+  (set-frame-position (selected-frame) 53 22)
   (set-frame-size (selected-frame) 164 52)
   (split-window-horizontally))
 
