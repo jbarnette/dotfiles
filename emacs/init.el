@@ -17,6 +17,10 @@
       (setenv "CDPATH" cdpath)
       (dolist (p path-list) (add-to-list 'exec-path p t))))
 
+(require 'toggle)
+(global-set-key (kbd "C-x C-t") 'toggle-buffer)
+(toggle-style "rails")
+
 (require 'my-bindings)
 (require 'my-defuns)
 (require 'my-ui)
