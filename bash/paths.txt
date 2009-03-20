@@ -9,3 +9,4 @@
 /usr/sbin
 /sbin
 /usr/X11/bin
+/opt/local/lib/postgresql83/bin

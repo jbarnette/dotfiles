@@ -13,3 +13,5 @@ do
     d=`dirname $f`
     alias dev-`basename $f`="ruby -I$d/../lib:$d/../ext -S $f"
 done
+
+alias my-sow="ruby -I~/work/hoe/lib -S ~/work/hoe/bin/sow"
