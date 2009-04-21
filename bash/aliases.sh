@@ -1,5 +1,5 @@
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
-alias jek="jekyll --pygments --auto --server"
+alias gitify="git svn clone -s --prefix=svn/"
 alias pj="pastejour"
 
 # ruby and rails bits
