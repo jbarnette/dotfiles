@@ -3,14 +3,15 @@ require "autotest/restart"
 Autotest.add_hook :initialize do |at|
   at.testlib = "minitest/autorun"
 
-  # I do Test suffix, not prefix.
   def at.path_to_classname s
     sep = File::SEPARATOR
     f = s.sub(/^test#{sep}/, '').sub(/\.rb$/, '').split(sep)
     f = f.map { |path| path.split(/_|(\d+)/).map { |seg| seg.capitalize }.join }
-    f = f.map { |path| path =~ /Test$/ ? path : "#{path}Test"  }
-    f.join('::')
+    f.last << "Test" unless f.last =~ /Test$/
+    f.join "::"
   end
+
+  at.clear_mappings
 
   at.add_exception ".git"
   at.add_exception ".gitignore"
@@ -21,7 +22,6 @@ Autotest.add_hook :initialize do |at|
   at.add_exception "lib/*.bundle"
   at.add_exception "tmp"
 
-  at.add_mapping(/^test.*_test\.rb$/) do |file, _|
-    file
-  end
+  at.add_mapping(/^lib\/(.*)\.rb$/)   { |_, m| "test/#{m[1]}_test.rb" }
+  at.add_mapping(/^test.*_test\.rb$/) { |f, _| f }
 end
