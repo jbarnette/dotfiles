@@ -3,7 +3,7 @@ require "hoe"
 
 require "./lib/<%= project %>/version.rb"
 
-HOE = Hoe.new "<%= project %>", <%= klass %>::VERSION do |p|
+Hoe.spec "<%= project %>"  do |p|
   p.developer "John Barnette", "jbarnette@rubyforge.org"
 
   p.url              = "http://github.com/jbarnette/<%= project %>"
