@@ -47,8 +47,8 @@
   "Resize, split, and position for the MacBook Air."
   (interactive)
   (delete-other-windows)
-  (set-frame-position (selected-frame) 53 22)
-  (set-frame-size (selected-frame) 164 52)
+  (set-frame-position (selected-frame) 2 22)
+  (set-frame-size (selected-frame) 164 53)
   (split-window-horizontally))
 
 (defun jbarnette-recompile-init ()
