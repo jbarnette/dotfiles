@@ -3,7 +3,7 @@
 (setq vendor-dir (concat dot-dir "/vendor"))
 (setq lib-dir (concat dot-dir "/lib"))
 
-; FIXME: explicit-shell-file-name
+; FIXME: explicit-shell-file-name to load .profile
 
 (add-to-list 'load-path vendor-dir)
 (add-to-list 'load-path lib-dir)
@@ -20,15 +20,8 @@
       (setenv "CDPATH" cdpath)
       (dolist (p path-list) (add-to-list 'exec-path p t))))
 
-(require 'toggle)
-(global-set-key (kbd "C-x C-t") 'toggle-buffer)
-(setq toggle-mappings (toggle-style 'rails))
-
-(require 'bs)
-(global-set-key (kbd "C-x C-b") 'bs-show)
-
-(require 'window-number)
-(window-number-meta-mode 1)
+(when (load (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
 
 (require 'my-bindings)
 (require 'my-defuns)
@@ -39,14 +32,3 @@
 (require 'my-navigation)
 (require 'my-ruby)
 (require 'my-scm)
-
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
