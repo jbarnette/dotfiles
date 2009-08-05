@@ -5,7 +5,7 @@
 (color-theme-twilight)
 
 (setq default-frame-alist
-      '((font . "-apple-inconsolata-medium-r-normal--16-160-72-72-m-160-iso10646-1")))
+      '((font . "-apple-inconsolata-medium-r-normal--14-160-72-72-m-160-iso10646-1")))
 
 (global-font-lock-mode 1)
 (menu-bar-mode -1)
