@@ -1,7 +1,7 @@
-require "test/unit"
+require "minitest/autorun"
 require "<%= file_name %>"
 
-class Test<%= klass %> < Test::Unit::TestCase
+class Test<%= klass %> < MiniTest::Unit::TestCase
   def test_sanity
     flunk "write tests or I will kneecap you"
   end
