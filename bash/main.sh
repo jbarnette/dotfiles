@@ -4,7 +4,7 @@ export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
 . "$DOTFILES/bash/git.sh"
 . "$DOTFILES/bash/aliases.sh"
 
-export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+export EDITOR=/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
 export LD_LIBRARY_PATH=/opt/local/lib
