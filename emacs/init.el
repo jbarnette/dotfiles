@@ -45,6 +45,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(compilation-error ((t (:inherit nil :background "black" :foreground "red"))))
  '(my-long-line-face ((((class color)) (:background "gray10"))) t)
  '(my-tab-face ((((class color)) (:background "grey10"))) t)
  '(my-trailing-space-face ((((class color)) (:background "gray10"))) t))
