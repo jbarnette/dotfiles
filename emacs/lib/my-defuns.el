@@ -1,5 +1,15 @@
-;; goto symbol
 (require 'imenu)
+
+; from defunkt
+(defun jbarnette-clean-slate ()
+  "Kill all but a few fundamental buffers."
+  (interactive)
+
+  (let ((buffers (buffer-list)) (safe '("*scratch*" "*shell*")))
+    (while (not (eq nil buffers))
+      (when (not (member (car buffers) safe))
+        (kill-buffer (car buffers))
+        (setq buffers (cdr buffers))))))
 
 (defun jbarnette-ido-goto-symbol ()
   "Will update the imenu index and then use ido to select a symbol to navigate to"
