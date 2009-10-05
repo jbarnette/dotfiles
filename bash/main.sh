@@ -1,4 +1,4 @@
-export DOTFILES=~/work/dotfiles
+export DOTFILES=~/my/dotfiles
 export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
 
 . "$DOTFILES/bash/git.sh"
@@ -11,6 +11,7 @@ fi
 export EDITOR=/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
+export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=/Library/Java/Home
 export LD_LIBRARY_PATH=/opt/local/lib
 export MANPATH=/opt/local/share/man:$MANPATH
