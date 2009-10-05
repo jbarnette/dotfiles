@@ -5,7 +5,7 @@
   "Kill all but a few fundamental buffers."
   (interactive)
 
-  (let ((buffers (buffer-list)) (safe '("*scratch*" "*shell*")))
+  (let ((buffers (buffer-list)) (safe '("*scratch*")))
     (while (not (eq nil buffers))
       (when (not (member (car buffers) safe))
         (kill-buffer (car buffers))
