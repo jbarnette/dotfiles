@@ -1,5 +1,7 @@
 export DOTFILES=~/my/dotfiles
-export PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`
+
+PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`:$PATH
+export PATH=`ruby -e "print ENV['PATH'].split(':').compact.uniq.join ':'"`
 
 . "$DOTFILES/bash/git.sh"
 . "$DOTFILES/bash/aliases.sh"
