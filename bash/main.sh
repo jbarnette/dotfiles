@@ -14,7 +14,7 @@ export EDITOR=/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
 export ARCHFLAGS="-arch x86_64"
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=`/usr/libexec/java_home`
 export LD_LIBRARY_PATH=/opt/local/lib
 export MANPATH=/opt/local/share/man:$MANPATH
 export P4CONFIG=.p4config
