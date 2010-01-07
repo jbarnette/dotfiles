@@ -1,10 +1,9 @@
-require "rubygems"
 require "hoe"
 
 Hoe.plugin :doofus, :git
 
 Hoe.spec "<%= project %>" do
-  developer "John Barnette", "jbarnette@rubyforge.org"
+  developer "John Barnette", "jbarnette@rubygems.org"
 
   self.extra_rdoc_files = Dir["*.rdoc"]
   self.history_file     = "CHANGELOG.rdoc"
