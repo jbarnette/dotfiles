@@ -1,5 +1,8 @@
-/Users/jbarnette/bin
-/Users/jbarnette/bin/flex/bin
+~/bin
+~/bin/ec2/bin
+~/bin/flex/bin
+~/bin/rds/bin
+
 /opt/local/bin
 /opt/local/lib/mysql5/bin
 /usr/local/git/bin

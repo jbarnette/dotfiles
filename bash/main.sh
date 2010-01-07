@@ -1,10 +1,12 @@
 export DOTFILES=~/my/dotfiles
 
 PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`:$PATH
-export PATH=`ruby -e "print ENV['PATH'].split(':').compact.uniq.join ':'"`
 
-. "$DOTFILES/bash/git.sh"
+export PATH=`ruby -e "print ENV['PATH'].split(':').compact.uniq. \
+    select { |p| File.directory? File.expand_path(p) }.join ':'"`
+
 . "$DOTFILES/bash/aliases.sh"
+. "$DOTFILES/bash/git.sh"
 
 if [ -s "$DOTFILES/bash/private.sh" ]
   then source "$DOTFILES/bash/private.sh"
