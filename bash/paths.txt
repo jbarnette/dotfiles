@@ -2,6 +2,7 @@
 ~/bin/ec2/bin
 ~/bin/flex/bin
 ~/bin/rds/bin
+~/play/rubinius/bin
 
 /opt/local/bin
 /opt/local/lib/mysql5/bin
