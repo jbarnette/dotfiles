@@ -15,6 +15,10 @@ fi
 export EDITOR=/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
+export GOROOT=$HOME/play/go
+export GOOS=darwin
+export GOARCH=amd64
+
 export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=`/usr/libexec/java_home`
 export LD_LIBRARY_PATH=/opt/local/lib
