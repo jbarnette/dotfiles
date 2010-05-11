@@ -10,6 +10,9 @@
 
 (setq running-osx (or (featurep 'mac-carbon) (eq 'ns window-system)))
 
+(if running-osx
+    (setq ns-pop-up-frames nil))
+
 (if (and running-osx (not (member "/Users/jbarnette/bin" exec-path)))
     ;; deal with OSX's wonky enivronment by forcing PATH to be correct.
     ;; argh this is stupid
@@ -32,6 +35,12 @@
 (require 'my-navigation)
 (require 'my-ruby)
 (require 'my-scm)
+
+(require 'textmate)
+(textmate-mode)
+
+(require 'peepopen)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
