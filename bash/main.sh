@@ -26,4 +26,4 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export P4CONFIG=.p4config
 export PS1='$(__git_ps1 "[%s] ")\w\\$ '
 
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
