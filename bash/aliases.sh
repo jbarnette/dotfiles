@@ -1,4 +1,4 @@
-alias e="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+alias e="/usr/local/Cellar/emacs/23.2/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 alias git=hub
 alias gitify="git svn clone -s --prefix=svn/"
 alias mr="macrake -qs"
