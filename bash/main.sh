@@ -12,7 +12,7 @@ if [ -s "$DOTFILES/bash/private.sh" ]
   then source "$DOTFILES/bash/private.sh"
 fi
 
-export EDITOR=/usr/local/Cellar/emacs/23.2/Emacs.app/Contents/MacOS/bin/emacsclient
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
 export GOROOT=$HOME/play/go
