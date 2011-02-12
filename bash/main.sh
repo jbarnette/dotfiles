@@ -24,4 +24,6 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export P4CONFIG=.p4config
 export PS1='$(__git_ps1 "[%s] ")\w\\$ '
 
+export NODE_PATH="/usr/local/lib/node"
+
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
