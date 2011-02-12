@@ -13,3 +13,6 @@
 [submodule "emacs/vendor/rinari"]
 	path = emacs/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
+[submodule "emacs/vendor/coffee-mode"]
+	path = emacs/vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
