@@ -54,12 +54,13 @@
   (indent-according-to-mode))
 
 (defun jbarnette-air ()
-  "Resize, split, and position for the MacBook Air."
+  "Resize, split, and position for the MacBook Air (or similar)."
   (interactive)
   (delete-other-windows)
   (set-frame-position (selected-frame) 2 22)
   (set-frame-size (selected-frame) 164 53)
-  (split-window-horizontally))
+  (split-window-horizontally)
+  (ns-toggle-fullscreen))
 
 (defun jbarnette-recompile-init ()
   "Recompiles all the files under my .emacs.d"
