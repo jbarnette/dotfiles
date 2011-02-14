@@ -1,8 +1,9 @@
 export DOTFILES=~/my/dotfiles
 
-PATH=`tr '\n' : < $DOTFILES/bash/paths.txt`:$PATH
+PATH=~/bin:$PATH:`tr '\n' : < $DOTFILES/bash/paths.txt`
 
-export PATH=`ruby -e "print ENV['PATH'].split(':').compact.uniq. \
+export PATH=`ruby -e "print ENV['PATH'].split(':'). \
+    reject { |p| p.nil? || p.empty? }.uniq. \
     select { |p| File.directory? File.expand_path(p) }.join ':'"`
 
 . "$DOTFILES/bash/aliases.sh"
@@ -15,15 +16,8 @@ fi
 export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 export VISUAL=$EDITOR
 
-export GOROOT=$HOME/play/go
-export GOOS=darwin
-export GOARCH=amd64
-
 export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=`/usr/libexec/java_home`
 export P4CONFIG=.p4config
 export PS1='$(__git_ps1 "[%s] ")\w\\$ '
-
 export NODE_PATH="/usr/local/lib/node"
-
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
