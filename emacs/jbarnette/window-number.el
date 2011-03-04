@@ -164,8 +164,9 @@ numbers in the mode-line."
      (:foreground "red")))
   "The face used for the window number in the mode-line.")
 
+
+(window-number-meta-mode 1)
+
 (provide 'window-number)
 
 ;;; window-number.el ends here.
-
-(window-number-meta-mode 1)
