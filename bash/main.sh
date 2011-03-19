@@ -2,8 +2,6 @@ source /etc/profile
 
 export DOTFILES=~/my/dotfiles
 
-export PATH= ~/bin:$PATH
-
 source "$DOTFILES/bash/aliases.sh"
 source "$DOTFILES/bash/git.sh"
 
