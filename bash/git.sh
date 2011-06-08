@@ -1,6 +1,8 @@
 __git_ps1 ()
 {
-	local g="$(git rev-parse --git-dir 2>/dev/null)"
+        local git="$(which git)"
+
+	local g="$($git rev-parse --git-dir 2>/dev/null)"
 	if [ -n "$g" ]; then
 		local r
 		local b
@@ -15,7 +17,7 @@ __git_ps1 ()
 			else
 				r="|AM/REBASE"
 			fi
-			b="$(git symbolic-ref HEAD 2>/dev/null)"
+			b="$($git symbolic-ref HEAD 2>/dev/null)"
 		elif [ -f "$g/.dotest-merge/interactive" ]
 		then
 			r="|REBASE-i"
@@ -27,15 +29,15 @@ __git_ps1 ()
 		elif [ -f "$g/MERGE_HEAD" ]
 		then
 			r="|MERGING"
-			b="$(git symbolic-ref HEAD 2>/dev/null)"
+			b="$($git symbolic-ref HEAD 2>/dev/null)"
 		else
 			if [ -f "$g/BISECT_LOG" ]
 			then
 				r="|BISECTING"
 			fi
-			if ! b="$(git symbolic-ref HEAD 2>/dev/null)"
+			if ! b="$($git symbolic-ref HEAD 2>/dev/null)"
 			then
-				if ! b="$(git describe --exact-match HEAD 2>/dev/null)"
+				if ! b="$($git describe --exact-match HEAD 2>/dev/null)"
 				then
 					b="$(cut -c1-7 "$g/HEAD")..."
 				fi
