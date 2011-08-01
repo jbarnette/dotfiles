@@ -6,6 +6,13 @@
 
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
+(defun jbarnette-coffee-custom ()
+  "coffee-mode-hook"
+ (set (make-local-variable 'tab-width) 2))
+
+(add-hook 'coffee-mode-hook
+  '(lambda() (jbarnette-coffee-custom)))
+
 (defun copy-from-osx ()
   (shell-command-to-string "pbpaste"))
 
@@ -15,8 +22,8 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-from-osx)
+(setq ring-bell-function 'ignore)
+(rvm-use-default)
 
 (setenv "PAGER" "/bin/cat")
 (server-start)
