@@ -1,3 +1,2 @@
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
-alias git=hub
+alias e=$EDITOR
 alias rake="rake -qs"
