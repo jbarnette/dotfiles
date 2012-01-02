@@ -23,7 +23,6 @@
       (process-send-eof proc))))
 
 (setq ring-bell-function 'ignore)
-(rvm-use-default)
 
 (setenv "PAGER" "/bin/cat")
 (server-start)

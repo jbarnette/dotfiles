@@ -7,7 +7,7 @@ if [ -s "$DOTFILES/bash/private.sh" ]
   then source "$DOTFILES/bash/private.sh"
 fi
 
-export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 export VISUAL=$EDITOR
 
 export ARCHFLAGS="-arch x86_64"
@@ -18,5 +18,3 @@ export NODE_PATH="/usr/local/lib/node"
 
 eval `/usr/libexec/path_helper -s`
 export PATH=node_modules/.bin:$PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
