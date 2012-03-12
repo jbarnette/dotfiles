@@ -8,13 +8,14 @@ if [ -s "$DOTFILES/bash/private.sh" ]
 fi
 
 export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+export    PS1='$(__git_ps1 "[%s] ")\w\\$ '
 export VISUAL=$EDITOR
 
-export ARCHFLAGS="-arch x86_64"
-export JAVA_HOME=`/usr/libexec/java_home`
-export  P4CONFIG=.p4config
-export       PS1='$(__git_ps1 "[%s] ")\w\\$ '
-export NODE_PATH="/usr/local/lib/node"
+if [ -x /usr/libexec/path_helper ]; then
+  eval `/usr/libexec/path_helper -s`
+fi
 
-eval `/usr/libexec/path_helper -s`
+export NODE_NO_READLINE=1
 export PATH=node_modules/.bin:$PATH
+
+eval "$(rbenv init -)"
