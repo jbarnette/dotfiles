@@ -1,5 +1,11 @@
 *~
 .DS_Store
 /bash/private.sh
+/emacs/.smex-items
+/emacs/auto-save-list
+/emacs/backups
+/emacs/elpa
+/emacs/eshell
+/emacs/places
 /gitconfig
 /private
