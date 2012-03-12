@@ -1,4 +1,5 @@
 *~
 .DS_Store
-bash/private.sh
-private
+/bash/private.sh
+/gitconfig
+/private
