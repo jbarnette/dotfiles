@@ -1,5 +1,3 @@
-git submodule update --init
-
 ln -s ~/my/dotfiles/bash/main.sh ~/.profile
 ln -s ~/.profile ~/.bash_profile
 ln -s ~/.profile ~/.bashrc
