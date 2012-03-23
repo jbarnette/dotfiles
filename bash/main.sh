@@ -7,7 +7,7 @@ if [ -s "$DOTFILES/bash/private.sh" ]
   then source "$DOTFILES/bash/private.sh"
 fi
 
-export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+export EDITOR="emacsclient"
 export    PS1='$(__git_ps1 "[%s] ")\w\\$ '
 export VISUAL=$EDITOR
 
