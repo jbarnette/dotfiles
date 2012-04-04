@@ -13,6 +13,7 @@
                       coffee-mode
                       markdown-mode
                       peepopen
+                      puppet-mode
                       starter-kit-bindings
 		      starter-kit-js
 		      starter-kit-lisp
