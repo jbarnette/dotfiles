@@ -23,6 +23,10 @@
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
   (flet ((process-list ())) ad-do-it))
 
+;; fuck you, whitespace
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; religion
 
 (setq-default indent-tabs-mode nil)
