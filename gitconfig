@@ -3,3 +3,5 @@
 	email = john@jbarnette.com
 [github]
 	user = jbarnette
+[push]
+	default = current
