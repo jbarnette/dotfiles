@@ -5,3 +5,9 @@
 	user = jbarnette
 [push]
 	default = current
+[credential]
+	helper = osxkeychain
+[hub]
+	protocol = https
+[core]
+	excludesfile = /opt/github/config/git/gitignore
