@@ -1,13 +1,21 @@
-[user]
-	name = John Barnette
-	email = john@jbarnette.com
+[alias]
+        cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
+
+[core]
+        excludesfile = /opt/boxen/config/git/gitignore
+
+[credential]
+        helper = /opt/boxen/bin/boxen-git-credential
+
 [github]
 	user = jbarnette
-[push]
-	default = current
-[credential]
-	helper = osxkeychain
+
 [hub]
 	protocol = https
-[core]
-	excludesfile = /opt/github/config/git/gitignore
+
+[push]
+	default = current
+        helper = /opt/boxen/bin/boxen-git-credential
+[user]
+        name = John Barnette
+        email = jbarnette@github.com
