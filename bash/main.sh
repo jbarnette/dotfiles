@@ -16,3 +16,8 @@ export VISUAL=$EDITOR
 if [ -f "/opt/github/env.sh" ]
   then source "/opt/github/env.sh"
 fi
+
+if [ -f "/opt/boxen/env.sh" ] ;
+  then source "/opt/boxen/env.sh"
+fi
+
