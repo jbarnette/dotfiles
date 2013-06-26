@@ -11,9 +11,9 @@ if [ -f "/opt/boxen/env.sh" ]
   then source "/opt/boxen/env.sh"
 fi
 
-if [ -f $HOME/src/app-env ]; then
-  export PATH="$HOME/src/app-env/bin:$PATH"
-  source "$HOME/src/app-env/share/app-ps1.sh"
+if [ -d $HOME/src/github/app-env ]; then
+  export PATH="$HOME/src/github/app-env/bin:$PATH"
+  source "$HOME/src/github/app-env/share/app-ps1.sh"
 fi
 
 export EDITOR="atom --wait"
