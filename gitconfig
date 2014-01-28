@@ -7,6 +7,10 @@
 [credential]
         helper = /opt/boxen/bin/boxen-git-credential
 
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
 [github]
 	user = jbarnette
 
@@ -14,8 +18,8 @@
 	protocol = https
 
 [push]
-	default = current
-        helper = /opt/boxen/bin/boxen-git-credential
+	default = simple
+
 [user]
-        name = John Barnette
-        email = jbarnette@github.com
+  name = John Barnette
+  email = jbarnette@github.com

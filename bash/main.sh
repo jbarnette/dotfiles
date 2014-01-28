@@ -1,23 +1,20 @@
-export DOTFILES=~/my/dotfiles
-
-source "$DOTFILES/bash/aliases.sh"
-source "$DOTFILES/bash/git.sh"
-
-if [ -s "$DOTFILES/bash/private.sh" ]
-  then source "$DOTFILES/bash/private.sh"
-fi
-
 if [ -f "/opt/boxen/env.sh" ]
   then source "/opt/boxen/env.sh"
 fi
 
-if [ -d $HOME/src/github/app-env ]; then
-  export PATH="$HOME/src/github/app-env/bin:$PATH"
-  source "$HOME/src/github/app-env/share/app-ps1.sh"
+export DOTFILES=~/my/dotfiles
+
+source "$DOTFILES/bash/functions.sh"
+
+if [ -s "$DOTFILES/bash/private.sh" ]; then
+  source "$DOTFILES/bash/private.sh"
 fi
 
 export EDITOR="atom --wait"
+export GOPATH=$HOME/go
 export NODE_NO_READLINE=1
-export PATH=$HOME/bin:$PATH
-export PS1='$(app-ps1 "%s ")$(__git_ps1 "[%s] ")\w\\$ '
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
+export PROMPT_COMMAND="set-terminal-title"
+export PS1="❤ "
+export SRCPATH=$HOME/src
 export VISUAL=$EDITOR
