@@ -1,5 +1,7 @@
 *~
 .DS_Store
+/atom/compile-cache
+/atom/storage
 /bash/private.sh
 /emacs.d/.smex-items
 /emacs.d/auto-save-list

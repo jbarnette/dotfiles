@@ -1,0 +1,18 @@
+'exception-reporting':
+  'userId': '3b39c7fb-36b6-a86d-9b8e-ba669c35798a'
+'metrics':
+  'userId': 'd3c9428b-b30c-76b8-c01d-967d1e8d7f2a'
+'welcome':
+  'showOnStartup': false
+'editor':
+  'fontSize': 16
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'atom-dark-syntax'
+  ]
+  'projectHome': '/Users/jbarnette/src'
+'feedback':
+  'username': ''
+'release-notes':
+  'viewedVersion': '0.92.0'
