@@ -1,0 +1,10 @@
+tap  "caskroom/cask"
+cask "atom"
+cask "firefox"
+cask "github"
+cask "google-chrome"
+cask "rdio"
+cask "vagrant"
+cask "virtualbox"
+
+brew "hub"
