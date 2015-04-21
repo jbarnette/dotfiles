@@ -1,16 +1,6 @@
 [alias]
         cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
 
-[core]
-        excludesfile = /opt/boxen/config/git/gitignore
-
-[credential]
-        helper = /opt/boxen/bin/boxen-git-credential
-
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
 [github]
 	user = jbarnette
 
@@ -23,3 +13,8 @@
 [user]
   name = John Barnette
   email = jbarnette@github.com
+
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
