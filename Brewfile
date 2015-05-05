@@ -6,5 +6,7 @@ cask "google-chrome"
 cask "rdio"
 cask "vagrant"
 cask "virtualbox"
+cask "yubiswitch"
 
 brew "hub"
+brew "jq"
