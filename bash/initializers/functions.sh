@@ -28,10 +28,5 @@ function gd {
 
 function gda {
   gd $1
-  atom
-}
-
-function gdag {
-  gda $1
-  github
+  atom .
 }
