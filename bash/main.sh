@@ -10,8 +10,7 @@ fi
 
 export EDITOR="atom --wait"
 export GOPATH=$HOME/go
-export NODE_NO_READLINE=1
-export PATH=$HOME/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/bin:/usr/local/heroku/bin:$GOPATH/bin:$PATH
 export PROMPT_COMMAND="set-terminal-title"
 export PS1="\$ "
 export SRCPATH=$HOME/src
