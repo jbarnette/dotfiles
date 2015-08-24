@@ -1,7 +1,3 @@
-if [ -f "/opt/boxen/env.sh" ]
-  then source "/opt/boxen/env.sh"
-fi
-
 export DOTFILES=~/src/jbarnette/dotfiles
 
 if [ -s "$DOTFILES/bash/private.sh" ]; then

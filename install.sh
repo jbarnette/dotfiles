@@ -1,6 +1,6 @@
 #!/bin/sh
-#/ Link dotfiles.
-#/ Usage: install.sh
+#/ Link dotfiles and install apps.
+#/ Usage: ./install.sh
 
 set -e
 
