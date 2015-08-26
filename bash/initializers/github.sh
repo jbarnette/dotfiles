@@ -5,7 +5,7 @@ function gd {
   local nwo="$owner/$name"
   local dir="$SRCPATH/$nwo"
 
-  ([ -e "$dir" ] || git clone "https://github.com/$nwo" "$dir") && cd "$dir"
+  ([ -e "$dir" ] || git clone "git@github.com:$nwo" "$dir") && cd "$dir"
 }
 
 function gda {
