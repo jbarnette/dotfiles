@@ -1,5 +1,6 @@
 *~
 .DS_Store
+
 /atom/compile-cache
 /atom/storage
 /bash/private.sh
@@ -11,5 +12,4 @@
 /emacs.d/places
 /emacs.d/tramp
 /emacs.d/url
-/gitconfig
 /private

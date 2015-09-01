@@ -4,17 +4,9 @@
 [github]
 	user = jbarnette
 
-[hub]
-	protocol = https
-
 [push]
 	default = simple
 
 [user]
   name = John Barnette
   email = jbarnette@github.com
-
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
