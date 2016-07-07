@@ -8,7 +8,7 @@ export EDITOR="atom --wait"
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/heroku/bin:$GOPATH/bin:$PATH
 export PROMPT_COMMAND="set-terminal-title"
-export PS1="\$ "
+export PS1="♡ "
 export SRCPATH=$HOME/src
 export VISUAL=$EDITOR
 
