@@ -1,5 +1,5 @@
 [alias]
-        cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
+  cleanup = ! git branch --merged | grep -v '*' | xargs git branch -d
 
 [github]
 	user = jbarnette
@@ -10,3 +10,5 @@
 [user]
   name = John Barnette
   email = jbarnette@github.com
+[credential]
+	helper = osxkeychain
