@@ -3,7 +3,7 @@ function set-terminal-title {
   local branch
   local title=$(pwd)
 
-  title=${title#$SRCPATH/}
+  title=${title#$SRCDIR/}
   title=${title/${HOME}/\~}
 
   if branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
@@ -12,3 +12,6 @@ function set-terminal-title {
 
   echo -ne "\033]2;$title\007"
 }
+
+export PROMPT_COMMAND="set-terminal-title"
+export PS1="♡ "

@@ -3,7 +3,7 @@ function gd {
   local name=$(basename "$1")
   local owner=$(basename "$parent")
   local nwo="$owner/$name"
-  local dir="$SRCPATH/$nwo"
+  local dir="$SRCDIR/$nwo"
 
   ([ -e "$dir" ] || git clone "git@github.com:$nwo" "$dir") && cd "$dir"
 }
