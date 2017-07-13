@@ -10,6 +10,7 @@ cask "firefox"
 cask "google-chrome"
 cask "screenhero"
 cask "slack"
+cask "virtualbox"
 cask "zoomus"
 
 brew "hub"
