@@ -4,12 +4,12 @@ tap "homebrew/services"
 tap "homebrew/versions"
 
 cask "1password"
-cask "atom"
 cask "atom-beta"
 cask "docker"
 cask "firefox"
 cask "google-chrome"
 cask "screenhero"
+cask "slack"
 cask "zoomus"
 
 brew "hub"
