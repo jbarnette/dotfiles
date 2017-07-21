@@ -1,9 +1,11 @@
 tap "caskroom/cask"
+tap "caskroom/fonts"
 
 cask "1password"
 cask "atom-beta"
 cask "docker"
 cask "firefox"
+cask "font-fira-code"
 cask "google-chrome"
 cask "minikube"
 cask "screenhero"
