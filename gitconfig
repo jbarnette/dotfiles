@@ -1,14 +1,18 @@
 [alias]
   cleanup = ! git branch --merged | grep -v '*' | xargs git branch -d
 
+[credential]
+  helper = osxkeychain
+
 [github]
-	user = jbarnette
+  user = jbarnette
 
 [push]
-	default = simple
+  default = simple
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
 
 [user]
   name = John Barnette
   email = jbarnette@github.com
-[credential]
-	helper = osxkeychain
