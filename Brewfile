@@ -7,7 +7,6 @@ cask "docker-edge"
 cask "firefox"
 cask "font-fira-code"
 cask "google-chrome"
-cask "screenhero"
 cask "slack"
 cask "zoomus"
 
