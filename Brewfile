@@ -1,6 +1,7 @@
 tap "caskroom/cask"
 tap "caskroom/fonts"
 tap "caskroom/homebrew-versions"
+tap "homebrew/services"
 
 cask "atom-beta"
 cask "docker-edge"
@@ -15,4 +16,5 @@ brew "hub"
 brew "jq"
 brew "kubectx"
 brew "kubernetes-cli"
+brew "rbenv"
 brew "watch"
