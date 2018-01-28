@@ -12,6 +12,7 @@ cask "slack"
 cask "zoomus"
 
 brew "fswatch"
+brew "go"
 brew "hub"
 brew "jq"
 brew "kubectx"
