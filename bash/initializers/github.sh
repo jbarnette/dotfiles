@@ -9,5 +9,5 @@ function gd {
 }
 
 function gda {
-  gd $1 && atom-beta .
+  gd $1 && a .
 }
