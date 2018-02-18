@@ -9,7 +9,6 @@ cask "firefox"
 cask "font-fira-code"
 cask "google-chrome"
 cask "slack"
-cask "zoomus"
 
 brew "fswatch"
 brew "go"
