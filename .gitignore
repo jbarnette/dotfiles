@@ -1,15 +1,2 @@
-*~
-.DS_Store
-
-/atom/compile-cache
-/atom/storage
 /bash/private.sh
-/emacs.d/.smex-items
-/emacs.d/auto-save-list
-/emacs.d/backups
-/emacs.d/elpa
-/emacs.d/eshell
-/emacs.d/places
-/emacs.d/tramp
-/emacs.d/url
 /private

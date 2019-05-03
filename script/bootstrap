@@ -1,15 +1,10 @@
 #!/bin/sh
 
-set -e
-set -x
+set -eux
 
 cd $(dirname "$0")/..
 
 ln -nfs "$(pwd)/bash/main.sh" ~/.profile
-ln -nfs "$(pwd)/gitconfig" ~/.gitconfig
 
-if [ ! -x /usr/local/bin/brew ]; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-brew bundle
+git config --global user.name "John Barnette"
+git config --global user.email john@jbarnette.com

@@ -7,7 +7,3 @@ function gd {
 
   ([ -e "$dir" ] || git clone "git@github.com:$nwo" "$dir") && cd "$dir"
 }
-
-function gda {
-  gd $1 && a .
-}
