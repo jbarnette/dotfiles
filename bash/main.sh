@@ -1,6 +1,6 @@
 export DOTFILES=$HOME/src/jbarnette/dotfiles
 export PATH=$HOME/bin:$PATH
-export SRCDIR=$HOME/src
+export SRCDIR=$HOME/src/github.com
 
 if [ -s "$DOTFILES/bash/private.sh" ]; then
   source "$DOTFILES/bash/private.sh"
